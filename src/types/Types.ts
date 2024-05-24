@@ -1,0 +1,1 @@
+export type CurrencyType = 'all' | 'rubls' | 'dollars'
