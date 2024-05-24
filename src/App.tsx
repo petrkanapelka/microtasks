@@ -18,19 +18,11 @@ function App() {
   const [money, setMoney] = useState(givenMoney);
 
   const filterHandler = (currency: CurrencyType) => {
-    if (currency === 'all') {
-      setMoney(givenMoney);
-    }
-
-    if (currency === 'rubls') {
-      setMoney(givenMoney.filter((element) => element.banknots === 'RUBLS'));
-    }
-
-
-    if (currency === 'dollars') {
-      setMoney(givenMoney.filter((element) => element.banknots === 'Dollars'));
-    }
-
+    currency === 'all'
+    ? setMoney(givenMoney)
+    : currency === 'rubls'
+      ? setMoney(givenMoney.filter((element) => element.banknots === 'RUBLS'))
+      : setMoney(givenMoney.filter((element) => element.banknots === 'Dollars'))
   }
 
   return (
